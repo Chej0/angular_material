@@ -38,6 +38,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 @NgModule({
   declarations: [],
   imports: [
@@ -45,6 +46,7 @@ import {MatTableModule} from '@angular/material/table';
     MatButtonModule,
     MatIconModule,
     MatAutocompleteModule,
+    MatCheckboxModule,
 MatDatepickerModule,
 MatFormFieldModule,
 MatInputModule,
@@ -81,6 +83,7 @@ MatTableModule,
     MatButtonModule,
     MatIconModule,
     MatDatepickerModule,
+    MatCheckboxModule,
 MatFormFieldModule,
 MatInputModule,
 MatRadioModule,
