@@ -1,0 +1,29 @@
+<div class="header" fxLayoutAlign="start center" fxLayout="row wrap">
+    <mat-icon>list</mat-icon>
+    <span *ngIf="list !== undefined" class="title w700">{{list.name}}</span>
+</div>
+<div class="list" fxLayout="row wrap" fxLayoutAlign="start start">
+    
+    <div *ngIf="list !== undefined" fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start start">
+
+        <div *ngFor="let t of list.tasks" fxLayoutAlign="start center" fxLayout="row wrap" fxFlex="100" class="inputsection">
+            <div fxFlex="50px" fxLayoutAlign="center center">
+                <mat-checkbox [(ngModel)]="t.status" color="primary"></mat-checkbox>
+            </div>
+            <div fxFlex [ngClass]="{'finish': t.status}">
+                {{t.text}}
+            </div>
+            <div fxFlex="50px" fxLayoutAlign="center center">
+                <mat-icon (click)="t.fav = !t.fav">{{ t.fav ? 'star_rate' : 'star_border' }}</mat-icon>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="footer" fxLayout="row wrap">
+    <div fxFlex="100" class="inputsection" fxLayoutAlign="start center">
+        <mat-icon>add</mat-icon>
+        <input class="addtask" placeholder="Ingrese aquí la nueva tarea" type="text">
+    </div>
+</div>

@@ -39,10 +39,17 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    FlexLayoutModule,
+    ReactiveFormsModule,
+    FormsModule,
     MatButtonModule,
     MatIconModule,
     MatAutocompleteModule,
@@ -80,6 +87,9 @@ MatTableModule,
     MatProgressSpinnerModule
   ],
   exports: [
+    FlexLayoutModule,
+    ReactiveFormsModule,
+    FormsModule,
     MatButtonModule,
     MatIconModule,
     MatDatepickerModule,

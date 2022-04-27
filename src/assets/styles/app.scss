@@ -1,1 +1,19 @@
 @import "themes/theme.scss";
+@import "components/app-components/sidenav";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.app {
+    height: 100vh;
+}
+.app2 {
+    height: calc(100vh - 20px);
+}
+
+.title { font-family: 'Poppins', sans-serif !important; }
+.text-md { font-size: 18px; }
+.w600 { font-weight: 600 !important; }
+.w700 { font-weight: 700 !important; }
+
+.primary { color: var(--color-primary); }
+.bg { background-color: var(--bg-color) !important; }
+
+.ma-0 { margin: 0 !important; }

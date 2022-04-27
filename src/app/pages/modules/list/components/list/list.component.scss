@@ -1,0 +1,30 @@
+.header { 
+    padding: 20px; color: white; font-size: 28px;
+    mat-icon { margin-right: 15px; }
+}
+.list {
+    padding: 0px 20px;
+    height: calc(100vh - 170px);
+    overflow: auto;
+}
+.footer { padding: 15px; }
+
+.inputsection {
+    background-color: var(--bg-color);
+    height: 56px;
+    border-radius: 10px;
+    padding: 0px 15px;
+    margin: 5px;
+}
+.addtask {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    text-decoration: none;
+    border: 0;
+    font-size: 18px;
+}
+
+.finish {
+    text-decoration: line-through;
+}

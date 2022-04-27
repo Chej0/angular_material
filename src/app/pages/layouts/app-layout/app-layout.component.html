@@ -1,0 +1,71 @@
+<mat-sidenav-container id="mainapp" class="app">
+    <mat-sidenav #sidenav class="sidenav" [opened]="!smallScreen" [mode]="smallScreen === true ? 'over' : 'side'">
+
+        <div class="brand">
+            <img src="assets/images/logo.png" class="logo" alt="">
+        </div>
+
+        <div class="user" fxLayout="row wrap" fxLayoutAlign="start center">
+            <div fxFlex="60px">
+                <img class="userimage" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="">
+            </div>
+            <div fxFlex fxLayout="column wrap">
+                <span class="title text-md w600">Sergio Méndez</span>
+                <span class="primary">Cuenta Premium</span>
+            </div>
+        </div>
+
+        <div class="button">
+            <button class="btn" color="primary" mat-flat-button>
+                <mat-icon>add</mat-icon>
+                Nueva Tarea
+            </button>
+        </div>
+
+
+
+
+        <!-- MENU  -->
+        <mat-nav-list>
+            <mat-list-item class="round-menu" routerLink="/">
+                <mat-icon class="primary" mat-list-icon>dashboard</mat-icon>
+                <div mat-line>Dashboard</div>
+            </mat-list-item>
+            <mat-list-item class="round-menu" routerLink="calendar">
+                <mat-icon class="primary" mat-list-icon>date_range</mat-icon>
+                <div mat-line>Calendario</div>
+            </mat-list-item>
+        </mat-nav-list>
+
+
+        <mat-divider></mat-divider>
+
+
+        <mat-nav-list>
+            <div mat-subheader fxLayout="row wrap" fxLayoutAlign="start center">
+                <span fxFlex class="primary">Listas</span>
+                <button mat-icon-button color="primary">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+
+            <mat-list-item *ngFor="let l of lista" class="round-menu" [routerLink]="'list/' + l.id">
+                <mat-icon class="primary" mat-list-icon>list</mat-icon>
+                <div mat-line>{{ l.name }}</div>
+                <span *ngIf="l.pending > 0" class="badge">{{ l.pending }}</span>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-container class="bg app">
+        
+
+        <button *ngIf="smallScreen === true" mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="round app2">
+
+            <router-outlet></router-outlet>
+        </div>
+
+    </mat-sidenav-container>
+</mat-sidenav-container>

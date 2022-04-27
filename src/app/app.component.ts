@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ejercicio';
+  mql = window.matchMedia('(prefers-color-scheme: dark)');
+
+  constructor(zone: NgZone) {
+    this.mql.addEventListener('change', mql => zone.run( () => {
+      this.mql = matchMedia('(prefers-color-scheme: dark)');
+
+      console.log('PREFIERE COLOR NEGRO ? ', this.mql.matches);
+    } ));
+  }
 }

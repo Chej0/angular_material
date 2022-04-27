@@ -18,10 +18,11 @@ $green-l: mat-light-theme($green-primary, $green-accent, $green-warn);
 
 .blue-theme.light {
     @include angular-material-theme($theme-l);
+    --color-primary: rgb(0, 166, 255);
+    --bg-color: #F5F6F4;
 }
 .blue-theme.dark {
     @include angular-material-theme($theme-d);
-}
-.green-theme {
-    @include angular-material-theme($green-l);
+    --color-primary: rgb(0, 166, 255);
+    --bg-color: #161616;
 }

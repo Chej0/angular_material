@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedComponentsModule } from './pages/shared-components/shared-components.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppLayoutComponent } from './pages/layouts/app-layout/app-layout.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppLayoutComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
